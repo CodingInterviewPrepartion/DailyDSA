@@ -13,26 +13,26 @@ public class d2{
     }
     static int[] findReverseArray(int[] aa){
 
-        int[] solution = aa;
+        int[] solution = new int[aa.length];
         // Trivial Solution
         
-        for(int i=strArray.length-1; i>=0 ;i-- ){
-            solution = solution + strArray[i];
-            
+        for(int i=aa.length-1; i>=0 ;i-- ){
+            solution[(aa.length-1) - i] = aa[i];
         }
-        
+
         // another Solution
 
-        int i=0;
-        while(i<strArray.length){   //O(n)
-            s.push(strArray[i]);
-            i++;
-        }
-        
-        while (!s.isEmpty()){  //O(n)
-            solution = solution+s.pop();
-        }
-       
+        //  //Optimal Solutions
+
+        //  Stack<Integer>  s = new Stack<>();
+        //  int i = 0;
+        //  while(i<solution.length){
+        //      s.add(solution[i]);
+        //      i++;
+        //  }
+        //  while(!s.isEmpty()){
+        //     solution[i] = s.pop();
+        //  }
 
         return solution;
     }
@@ -61,16 +61,3 @@ public class d2{
 
 
 
-//  //Optimal Solutions
-
-//  Stack<Integer>  s = new Stack<>();
-//  int i = 0;
-//  while(i<solution.length){
-//      s.add(solution[i]);
-//      i++;
-//  }
-//  i=0;
-//  while(!s.isEmpty()){
-//     solution[i] = s.pop();
-//     i++;
-//  }
